@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: landing
+    schema: raw
+    tables:
+      - name: events
+        columns:
+          - name: event_id
+            tests: [not_null, unique]

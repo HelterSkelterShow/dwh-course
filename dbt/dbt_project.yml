@@ -1,0 +1,15 @@
+name: pet_dwh
+version: '1.0.0'
+config-version: 2
+profile: pet_dwh
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+models:
+  pet_dwh:
+    stg:
+      +schema: stg
+      +materialized: table
+    dm:
+      +schema: dm
+      +materialized: table

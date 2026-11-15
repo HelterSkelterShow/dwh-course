@@ -1,0 +1,20 @@
+{
+  "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+  "tasks.max": "1",
+  "topics": "pet-sales",
+  "connection.url": "jdbc:postgresql://postgres:5432/warehouse",
+  "connection.user": "dwh",
+  "connection.password": "dwh",
+  "table.name.format": "raw.events",
+  "insert.mode": "upsert",
+  "pk.mode": "record_value",
+  "pk.fields": "event_id",
+  "auto.create": "false",
+  "auto.evolve": "false",
+  "delete.enabled": "false",
+  "batch.size": "50",
+  "errors.tolerance": "none",
+  "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+  "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "value.converter.schemas.enable": "true"
+}
